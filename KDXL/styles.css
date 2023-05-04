@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: whitesmoke;
+  background-color: rgb(6, 6, 6);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+a {
+  color: peachpuff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(6, 6, 6, 0.4), rgba(6, 6, 6, 0.3)),
+    url("chaos.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header div {
+  margin-top: 30vh;
+  margin-bottom: 60vh;
+  background-color: rgba(6, 6, 6, 0.7);
+  box-shadow: 0 3px 10px rgb(6 6 6 / 0.2);
+  text-shadow: rgb(6, 6, 6) 1px 0 10px;
+  border-radius: 4px;
+  padding: 1.8rem;
+  max-width: 60ch;
+  width: 90%;
+  /* text-align: center; */
+}
+
+.sTitle {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.intro {
+  max-width: 90%;
+  width: 60ch;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.imgIntro {
+  text-align: center;
+}
+
+.imgIntro img {
+  max-width: 400px;
+}
+
+figcaption {
+  font-size: 1rem;
+  line-height: normal;
+  font-style: italic;
+}
+
+.picture {
+  margin-top: 35px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.picture img {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.section {
+  transform-origin: center top;
+  transform: scaleY(calc(1 - 0.1));
+}
+
+.section > * {
+  transform-origin: center top;
+  transform: scaleY(calc(1 / (1 - 0.1)));
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.125;
+}
+
+.mg {
+  margin-top: 65px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.8em;
+  margin: 20px 0;
+}
+
+.content {
+  position: relative;
+  margin: -20vh auto 0;
+  padding: 20px;
+  max-width: 60ch;
+  width: 90%;
+  background-color: rgba(6, 6, 6, 0.8);
+}
+
+.content p,
+.content span {
+  margin-bottom: 2rem;
+}
+
+.image-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+.image-container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 6, 6, 0),
+    rgba(6, 6, 6, 0.05),
+    rgba(6, 6, 6, 0.1),
+    rgba(6, 6, 6, 0.15),
+    rgba(6, 6, 6, 0.2),
+    rgba(6, 6, 6, 0.25),
+    rgba(6, 6, 6, 0.3),
+    rgba(6, 6, 6, 0.35),
+    rgba(6, 6, 6, 0.4),
+    rgba(6, 6, 6, 0.45),
+    rgba(6, 6, 6, 0.5),
+    rgba(6, 6, 6, 0.55),
+    rgba(6, 6, 6, 0.6),
+    rgba(6, 6, 6, 0.65),
+    rgba(6, 6, 6, 0.7),
+    rgba(6, 6, 6, 0.75),
+    rgba(6, 6, 6, 0.8),
+    rgba(6, 6, 6, 0.85),
+    rgba(6, 6, 6, 0.9),
+    rgba(6, 6, 6, 0.95),
+    rgba(6, 6, 6, 1)
+  );
+}
+
+.kilde {
+  font-size: 1.4rem;
+}
+
+.kilde2 {
+  font-size: 1.3rem;
+}
+
+.footer {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.upArrow {
+  color: whitesmoke;
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  .introContainer {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .content {
+    padding: 30px;
+  }
+}

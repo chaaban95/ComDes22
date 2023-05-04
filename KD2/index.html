@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Second Assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+      integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"
+      integrity="sha512-Tfw6etYMUhL4RTki37niav99C6OHwMDB2iBT5S5piyHO+ltK2YX8Hjy9TXxhE1Gm/TmAV0uaykSpnHKFIAif/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <header>
+      <section class="hero"></section>
+      <section class="caption">
+        <span class="foto"
+          ><a
+            href="https://www.utdanningsforbundet.no/nyheter/2022/streikestart-i-bergen--alle-er-veldig-klare-for-streik/"
+            >Foto: Paul S. Amundsen</a
+          >
+        </span>
+        <span class="bck">ALT STARTET</span>
+        <span class="bck">I BERGEN</span>
+      </section>
+    </header>
+    <main>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content lb" data-aos="fade-zoom-in">
+            <h3 class="date">20. juni 2022</h3>
+            <h1>Den 1. uttak</h1>
+            <i>
+              –Denne streiken handler om framtidens skole! Forteller Karine
+              Mørck-Gåserød ved Mysen ungdomsskole.
+            </i>
+            <p>
+              Mandag 20.juni gikk de første 40 lærerne ut i streik i Gimle
+              oppveksttun i Bergen, etter at Utdanningsforbundet ikke godtok
+              årets lønnsoppgjør. Lærerne føler seg ikke verdsett, når de gang
+              på gang stiller opp godt forberedt på skolestart, men likevel har
+              de ikke fått noe lønnsøkning de siste 6 årene. Helt siden 2016 har
+              lærere dårligere lønnsvekst enn andre ansatte i kommunesektoren.
+            </p>
+            <figure id="chart">
+              <canvas
+                id="chartcanvas"
+                aria-label="Lønn utvikling graff"
+                role="img"
+              >
+                <img src="lønnsammenligning.png" alt="Lønn utvikling graff" />
+              </canvas>
+            </figure>
+            <i
+              ><a
+                href="https://www.faktisk.no/artikler/zkxm4/er-laererne-lonnstapere-for-sjette-ar-pa-rad"
+                target="_blank"
+                >(Tabell 1.1 rapport fra Det tekniske beregningsutvalget for
+                inntektsoppgjørene)
+              </a>
+            </i>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content rb" data-aos="fade-zoom-in">
+            <h3 class="date">22. august 2022</h3>
+            <h1>Den 2. uttak</h1>
+            <p>
+              Mandag 22.august er den første skoledagen i år.
+              Utdanningsforbundet trapper opp streiken og ytterlige 1300 lærere
+              blir tatt ut. Flere Elever møter opp til skolen uten lærerne til
+              stedet.
+            </p>
+            <p>
+              Lærerne mener på at KS (Kommunesektorens organisasjon) mangler
+              ambisjoner for skoler og at de ikke anerkjenner kompleksiteten i
+              læreryrket. I flere tilfeller har ulike kommuner benyttet seg av
+              en mulighet i opplæringsloven til å ansette lærer uten
+              lærerutdanning. (Når de først ikke får tak i lærere med utdanning)
+            </p>
+            <p>
+              <b
+                >Nesten 1 av 5 lærere mangler nødvendig utdanning ifølge SSB.
+                (ca.17%)</b
+              >
+            </p>
+            <iframe
+              src="https://www.youtube.com/embed/moPpXHE077g"
+              title="Skal dere satse på elevene, må dere satse på lærerne!"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="container left">
+          <article class="content lb" data-aos="fade-zoom-in">
+            <h3 class="date">29. august 2022</h3>
+            <h1>Den 3. uttak</h1>
+            <p>
+              1400 nye medlemmer går ut i streik. Det blir arrangert en digital
+              streikemarkering med leder og streikesjef Steffen Handal hvor han
+              kommer med en rekke innslag fra hele Norge.
+            </p>
+            <p>
+              -Hold ut. Dere må vente på oss, vi kommer tilbake til
+              klasserommet! Denne streiken er ikke bare en kamp for lærerlønnen.
+              Den er også en kamp for fremtiden til elevene. Hvis vi ikke har
+              nok lærere med lærerutdanning i klasserommene, går det ut over
+              elevenes læring- forteller Handal til alle elevene i Norge.
+            </p>
+          </article>
+        </div>
+        <div class="container right">
+          <article class="content rb" data-aos="fade-zoom-in">
+            <h3 class="date">31. august 2022</h3>
+            <h1>Den 4. uttak</h1>
+            <p>431 nye medlemmer går ut i streik.</p>
+            <p>
+              Det er stor støtte i fra folket i landet. Det har blitt gjort en
+              undersøkelse av Respons Analyse som viser at hele 70 % av
+              befolkningen støtter lærerne i kampen om bedre arbeidsvilkår.
+            </p>
+            <p>
+              -Det er godt vi har stor støtte i befolkningen, sier Steffen
+              Handal som er streiksjefen.
+            </p>
+            <figure id="chart2">
+              <canvas id="myChart" aria-label="Lønn utvikling graff" role="img">
+                <img src="støttestreik.png" alt="Lønn utvikling graff"
+              /></canvas>
+            </figure>
+            <i>
+              <a
+                href="https://www.utdanningsforbundet.no/siteassets/-fotoweb-arkiv/2022/4/respons-utdanningsforbundet_streik_rapport_220829_ie.pdf"
+                target="_blank"
+                >Holdning til lærerstreiken (undersøkelse som viser støtte
+                lærerne får av folket)
+              </a></i
+            >
+            <p>
+              Dette viser at kun 24 % har mindre eller ingen støtte til streiken
+              og 7 % som er usikre.
+            </p>
+          </article>
+        </div>
+        <div class="container left">
+          <article class="content lb" data-aos="fade-zoom-in">
+            <h3 class="date">6. september 2022</h3>
+            <h1>Den 5. uttak</h1>
+            <p>Rundt 300 nye medlemmer tas ut i streik.</p>
+            <p>
+              Vi har kommet i kontakt med en av lærerne som gikk ut til streik
+              rundt denne tiden. (intervju dagen 26.09.2022) Karine
+              Mørck-Gåserød er lærer ved Mysen ungdomsskole og underviser i
+              Kunst og Håndverk, Norsk, KRLE, Samfunnsfag og Engelsk. Hun er nå
+              på fjerde uke av streiken. På spørsmålet om når forventer du at
+              streiken skal avslutte? Svarer Karine følgende.
+            </p>
+            <p>
+              -Jeg tror og håper at streiken tar slutt snart, fordi politikerne
+              gir KS mandat til å prioritere lærerne og at det legges penger på
+              bordet. Jeg håper og ønsker sterkt at lærerne havner under staten
+              igjen.
+            </p>
+            <p>
+              <b
+                >I 2004 Regjeringen har bestemt at hele forhandlingsansvaret for
+                lærernes lønns- og arbeidsvilkår for lærere og skoleledere skal
+                overføres til Kommunenes Sentralforbund (KS).</b
+              >
+            </p>
+            <p>
+              Hva føler du er grunnene til denne streik? Er det på grunn av
+              økonomi eller arbeidsforhold?
+            </p>
+            <p>
+              -Denne streiken handler framtidens skole. Det er få som søker
+              lærerutdanning og 50% av oss som har jobbet en stund, vurderer å
+              slutte.
+            </p>
+            <p>
+              -Lønn er et virkemiddel for å beholde og rekruttere. Dersom ikke
+              lærerne blir prioritert, så blir det enda større lærermangel, noe
+              som går utover utdanningen til elevene.
+            </p>
+            <p>-Så da tenker jeg at svaret er både elevenes framtid og lønn.</p>
+            <p>
+              På slutten spurte vi Karine om hva tenker hun dersom myndighetene
+              iverksetter tvungen lønnsnemd?
+            </p>
+            <p>
+              -Da tenker jeg vi har en større krise i skolen enn før streiken.
+              Dette vil svekke tilliten til politikerne, KS, undergrave
+              arbeidstakernes rettigheter og ikke minst vil dette ramme elevene
+              enda hardere. Noen lærere vil nok velge seg over i andre yrker,
+              konflikten vil være den samme om et år og enda færre vil søke seg
+              til lærerutdanningen. Opplæringen elevene vil få vil på ingen måte
+              leve opp til politikernes forventninger, ihvertfall ikke over tid,
+              og skolen vil bli en oppbevaringsinstitusjon i økende grad
+              ettersom tiden går.
+            </p>
+            <img
+              src="KarineM.png"
+              alt="Bilde av Karine Mørck-Gåserød under streik"
+            />
+            <i
+              >(Bilde av Karine Mørck-Gåserød under streik. Foto:
+              <a
+                href="https://www.facebook.com/photo/?fbid=444863851008028&set=a.288565949971153"
+                target="_blank"
+                >Facebook siden til Utdanningsforbundet)
+              </a>
+            </i>
+          </article>
+        </div>
+        <div class="container right">
+          <article class="content rb" data-aos="fade-zoom-in">
+            <h3 class="date">12. september 2022</h3>
+            <h1>Forhandlinger hos riksmekleren førte ingen vei.</h1>
+            <img src="ToreSkaar.jpg" alt="Bilde av Steffen Handal" />
+            <i
+              >(Steffen Handal. Foto: Tore Skaar)
+              <a
+                href="https://www.utdanningsforbundet.no/nyheter/2022/streiken-fortsetter--ingen-vilje-fra-ks/"
+                target="_blank"
+                >Streiken fortsetter: Ingen vilje fra KS (12.september 2022)
+              </a>
+            </i>
+            <p>
+              "KS har avvist våre løsningsalternativer i prosessene hos
+              Riksmekleren nå" forklarer Steffen Handal. KS viser ingen vilje
+              til å finne ut veien ut av streiken. Samtalene førte ikke frem til
+              noe og Utdanningsforbundet leder Steffen Handal mener på at det er
+              tvert imot. At det er en motvilje mot å finne en løsning begge
+              parter kan leve med.
+            </p>
+            <p>
+              -Jeg mener at KS nå spekulerer i tvungen lønnsnemd. Og prisen er
+              det barn og elever som må betale" sier Handal
+            </p>
+            <p>
+              Samtidig samles det lærere og sympatisører foran Stortinget for å
+              vise sin støtte til lærerstreik, tross regn og dårlig vær.
+            </p>
+          </article>
+        </div>
+        <div class="container left">
+          <article class="content lb" data-aos="fade-zoom-in">
+            <h3 class="date">13. september 2022</h3>
+            <h1>Den 6. uttak</h1>
+            <p>
+              Etter at forhandlingene ikke gikk som planlagt, så ble det
+              ytterlige 3000 nye medlemmer tatt ut til streik. Det er nå rundt
+              6500 medlemmer som ble tatt ut til streik.
+            </p>
+          </article>
+        </div>
+        <div class="container right">
+          <article class="content rb" data-aos="fade-zoom-in">
+            <h3 class="date">17-18. september 2022</h3>
+            <h1>Nytt løsningsforslag</h1>
+            <img src="utdanningsfBrum.jpg" alt="Bilde av streikere i protest" />
+            <i
+              >(Foto: Utdanningsforbundet Bærum)
+              <a
+                href="https://www.utdanningsforbundet.no/nyheter/2022/ingen-bevegelse-hos-ks/"
+                target="_blank"
+                >Ingen bevegelse hos KS (18.september 2022)
+              </a></i
+            >
+            <p>
+              17.September går Steffen Handal ut og presenterer
+              løsningsforslaget som kan få slutt på streiken. Det vil bare koste
+              300 millioner i merkostnader over to år. Totalkostnaden vil være
+              den samme som å bygge 1,3 kilometer med motorvei i Norge. men bare
+              dagen etter og 2 timer med forhandling så sier KS nei til
+              løsningsforslaget.
+            </p>
+          </article>
+        </div>
+        <div class="container left">
+          <article class="content lb" data-aos="fade-zoom-in">
+            <h3 class="date">19. september 2022</h3>
+            <h1>Den 7.uttak</h1>
+            <p>
+              Dagen etter at forhandlingene ikke kom noe vei ble det 1800 nye
+              medlemmer tatt ut til streik.
+            </p>
+          </article>
+        </div>
+        <div class="container right">
+          <article class="content rb" data-aos="fade-zoom-in">
+            <h3 class="date">27. September</h3>
+            <h1>Enighet</h1>
+            <p>
+              Tilbake på skolen. Partiene kom til enighet, streiken i skolene
+              tar slutt etter at regjeringen la ned tvungen lønnsnemnd. På
+              onsdag 28.09.2022 møter elever og lærer vanlig på skole.
+            </p>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="#">
+        <i class="upArrow fa fa-chevron-up fa-2x"></i>
+      </a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+      var canvas = document.getElementById("chartcanvas");
+      var ctx = canvas.getContext("2d");
+
+      var colorA = "mediumaquamarine";
+      var colorB = "teal";
+
+      var BarCompare = new Chart(ctx, {
+        type: "bar",
+        data: {
+          datasets: [
+            {
+              data: [2.5, 2.3, 2.8, 3.0, 1.2, 2.3, 2.7],
+              label: "Undervisningansatte",
+              backgroundColor: [
+                colorA,
+                colorA,
+                colorA,
+                colorA,
+                colorA,
+                colorA,
+                colorA,
+              ],
+              datalabels: {
+                anchor: "end",
+                align: "top",
+                offset: 1,
+                font: {
+                  weight: "bold",
+                },
+              },
+            },
+            {
+              data: [2.5, 2.6, 3.0, 3.7, 1.9, 2.8, 2.9],
+              label: "Andre kommuneansatte",
+              backgroundColor: [
+                colorB,
+                colorB,
+                colorB,
+                colorB,
+                colorB,
+                colorB,
+                colorB,
+              ],
+              datalabels: {
+                anchor: "end",
+                align: "top",
+                offset: 1,
+                font: {
+                  weight: "bold",
+                },
+              },
+            },
+          ],
+          labels: [2016, 2017, 2018, 2019, 2020, 2021, 2022],
+        },
+        plugins: [ChartDataLabels],
+        options: {
+          responsive: true,
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "I stor grad",
+            "I noen grad",
+            "I mindre grad",
+            "Ikke i det hele tatt",
+            "Ikke sikker",
+          ],
+          datasets: [
+            {
+              label: "I hvilken grad støtter du lærerne i denne streiken?",
+              data: [42, 28, 15, 9, 7],
+              backgroundColor: "purple",
+              barThickness: 30,
+              maxBarThickness: 33,
+              datalabels: {
+                anchor: "end",
+                align: "top",
+                offset: 1,
+                font: {
+                  weight: "bold",
+                },
+              },
+            },
+          ],
+        },
+        plugins: [ChartDataLabels],
+        options: {
+          responsive: true,
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  min: 0,
+                  max: 100,
+                  callback: function (value) {
+                    return value + "%";
+                  },
+                },
+                scaleLabel: {
+                  display: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
